@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<script>
+function myFunction(a) {
+    location.assign(a);
+}
+</script>
+
+
+
+
+
+
+
+
+        {% for row in ans_category %}
+
+        <div class="jumbotron" style =" width:100%; " >
+ <div class="container" style ="padding: 0%;margin: 0% ; width:100%;">
+    <h1 class="display-3" >{{row[2]}}</h1>
+          {% if row[3] != "empty" %}
+
+         <p style="font-size: 2em ">Destenation Date: {{row[3]}}</p>
+                 {% endif %}
+
+              <p style="font-size: 2em "> {{row[6]}}</p>
+
+<div>
+ <button value="{{row[7]}}"  onclick="myFunction(this.value)" style=" display: inline-block ; font-size: 2em ;background-color: #008CBA;padding-right: 0px;margin-right: 0px;align-items:left;">{{row[7]}}</button>
+</div>
+
+     {% if row[8] != "empty" %}
+     <div container>
+    <p><button value="{{row[8]}}"  onclick="myFunction(this.value)" style="font-size: 2em ;background-color: #008CBA;padding-right: 0px;margin-right: 0px;align-items:left; display: inline-block">{{row[8]}}</button></p>
+         </div>
+         {% endif %}
+
+     {% if row[9] != "empty" %}
+<button value="{{row[9]}}"  onclick="myFunction(this.value)" style=" display: inline-block ; font-size: 2em ;background-color: #008CBA;padding-right: 0px;margin-right: 0px;align-items:left;">{{row[9]}}</button>
+                 {% endif %}
+
+  </div>
+</div>
+
+        {% endfor %}
+
+
+{% endblock %}

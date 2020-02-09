@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <li class="nav-item">
+       <form class="form-inline" method="POST" action="{{ url_for('delete_record_from_category') }}">
+  <div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+
+
+            <select id="mySelect2" name="category_id" class="selectpicker form-control" >
+
+                <option>{{ans[0][1]}}</option>
+
+            </select>
+
+            <select id="mySelect" name="record_name" class="selectpicker form-control" >
+
+                {% for row in ans %}
+                <option>{{row[2]}}</option>
+                        {% endfor %}
+            </select>
+
+
+    </div>
+    <button type="submit" class="btn btn-secondary  btn-sm">Go</button>
+  </div>
+</form>
+      </li>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="block1">
+
+
+    <h3 style="color:green; text-align: center; "> {{message}}  </h3>
+
+
+
+        <form class="form-style-9" action="{{ url_for('insert_record_to_category') }}" method="post">
+                <h2> Add Record To Category </h2>
+
+<ul>
+
+    <li>
+    <input type="text" name="id_category" value="{{ ans[0] }}" class="field-style field-full align-none"  placeholder="id"  />
+
+</li>
+
+
+
+    <li>
+    <input type="text" name="category_name" value="{{ ans[1] }}" class="field-style field-full align-none"  placeholder="Category Name"  />
+
+</li>
+
+    <li>
+    <input type="text" name="name_of_record"  class="field-style field-full align-none"  placeholder="name_of_record"  />
+
+</li>
+
+    <li>
+    <input type="text" name="record_destenation_date"   class="field-style field-full align-none" placeholder="record_destenation_date" />
+</li>
+
+
+<li>
+    <input type="text" name="archive" value="false" class="field-style field-full align-none"  placeholder="archive"  />
+</li>
+
+    <li>
+    <input type="text" name="show_counter"  value="0" class="field-style field-full align-none"  placeholder="show_counter"  />
+</li>
+
+<li>
+    <input type="text" name="record_description"  class="field-style field-full align-none"  placeholder="record_description"  />
+
+</li>
+
+ <li>
+    <input type="text" name="link1"   class="field-style field-full align-none" placeholder="link1" value="empty"/>
+</li>
+
+ <li>
+    <input type="text" name="link2"   class="field-style field-full align-none" placeholder="link2" value="empty" />
+</li>
+
+ <li>
+    <input type="text" name="link3"   class="field-style field-full align-none" placeholder="link3" value="empty"/>
+</li>
+
+
+<li>
+<input type="submit" value="insert record" />
+</li>
+
+</ul>
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

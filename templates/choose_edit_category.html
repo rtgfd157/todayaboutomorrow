@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <li class="nav-item">
+       <form class="form-inline" method="POST" action="{{ url_for('choose_edit_category') }}">
+  <div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+            <select id="mySelect" name="category_name" class="selectpicker form-control" >
+
+                {% for row in ans %}
+                <option>{{row['category']}}</option>
+
+
+                        {% endfor %}
+
+
+            </select>
+
+
+    </div>
+    <button type="submit" class="btn btn-secondary  btn-sm">Go</button>
+  </div>
+</form>
+      </li>
+
+{% endblock %}

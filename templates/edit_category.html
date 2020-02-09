@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="block1">
+
+
+    <h3 style="color:green; text-align: center; "> {{message}}  </h3>
+
+
+
+        <form class="form-style-9" action="{{ url_for('edit_category') }}" method="post">
+                <h2> edit Category </h2>
+
+<ul>
+
+    <li>
+    <input type="text" name="id_category" value="{{ ans[0] }}" class="field-style field-full align-none"  placeholder="id"  />
+
+</li>
+<li>
+    <input type="text" name="category_name" value="{{ ans[1] }}" class="field-style field-full align-none"  placeholder="category name"  />
+
+</li>
+<li>
+    <input type="text" name="category_description"   value="{{ ans[2] }}"class="field-style field-full align-none" placeholder="category description" />
+</li>
+
+ <li>
+    <input type="text" name="pic_link"  value="{{ ans[3] }}" class="field-style field-full align-none" placeholder="pic link" />
+</li>
+
+
+<li>
+<input type="submit" value="Update  Category" />
+</li>
+
+
+</ul>
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

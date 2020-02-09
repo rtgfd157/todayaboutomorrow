@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="block1">
+        {{ans}}
+
+    <h3 style="color:green; text-align: center; "> {{message}}  </h3>
+
+
+
+        <form class="form-style-9" action="{{ url_for('record_edit_form') }}" method="post">
+                <h2> edit Record  </h2>
+
+<ul>
+
+    <li>
+    <input type="text" name="id_record" value="{{ ans[0][0] }}" class="field-style field-full align-none"  placeholder="id"  />
+
+</li>
+
+
+
+    <li>
+    <input type="text" name="category_id" value="{{ ans[0][1] }}" class="field-style field-full align-none"  placeholder="Category id"  />
+
+</li>
+
+    <li>
+    <input type="text" name="name_of_record"  value="{{ ans[0][2] }}" class="field-style field-full align-none"  placeholder="name_of_record"  />
+
+</li>
+
+    <li>
+    <input type="text" name="record_destenation_date"  value="{{ ans[0][3] }}"  class="field-style field-full align-none" placeholder="record_destenation_date" />
+</li>
+
+
+<li>
+    <input type="text" name="archive"  value="{{ ans[0][4] }}" class="field-style field-full align-none"  placeholder="archive"  />
+</li>
+
+    <li>
+    <input type="text" name="show_counter"  value="{{ ans[0][5] }}" class="field-style field-full align-none"  placeholder="show_counter"  />
+</li>
+
+<li>
+    <textarea rows="4" cols="50" name="record_description"  value="{{ ans[0][6] }}"   placeholder="record_description"  >{{ ans[0][6] }}</textarea>
+
+</li>
+
+ <li>
+    <input type="text" name="link1"  value="{{ ans[0][7] }}"  class="field-style field-full align-none" placeholder="link1" value="empty"/>
+</li>
+
+ <li>
+    <input type="text" name="link2"  value="{{ ans[0][8] }}"  class="field-style field-full align-none" placeholder="link2" value="empty" />
+</li>
+
+ <li>
+    <input type="text" name="link3"  value="{{ ans[0][9] }}"  class="field-style field-full align-none" placeholder="link3" value="empty"/>
+</li>
+
+
+<li>
+<input type="submit" value="insert record" />
+</li>
+
+</ul>
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+
+{{quote}}
+
+
+         <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('add_category') }}" style="font-size: 2em;">ADD Category </a>
+      </li>
+
+   <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('choose_edit_category') }}" style="font-size: 2em;">edit Category </a>
+      </li>
+
+         <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('delete_category') }}" style="font-size: 2em;">delete Category </a>
+      </li>
+
+
+         <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('choose_category_for_adding_record') }}" style="font-size: 2em;">Adding Record To Category </a>
+      </li>
+
+         <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('choose_category_for_deleting_record') }}" style="font-size: 2em;">Deleting Record From Category </a>
+      </li>
+
+
+         <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('choose_category_for_editing_record') }}" style="font-size: 2em;">Editing Record From Category </a>
+      </li>
+
+
+{% endblock %}
